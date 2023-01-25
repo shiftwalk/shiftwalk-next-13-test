@@ -13,7 +13,7 @@ export default function SanityImage({ image, className, alt, priority }) {
   }
 
 	return (
-    <figure className={`image bg-grey cover-image`}>
+    <figure className={`image bg-grey cover-image absolute w-full h-full`}>
 		  <Image
         src={urlForImage(image.asset.url).url()}
         loader={customLoader}
