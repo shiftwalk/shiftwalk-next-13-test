@@ -18,9 +18,7 @@ export default function SanityImage({ image, className, alt, priority }) {
         src={urlForImage(image.asset.url).url()}
         loader={customLoader}
         className={`${imageIsLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity ease-in-out duration-500`}
-        {...(priority ? {
-          priority: true} : {}
-        )}
+        priority
         fill
         alt={alt ? alt : 'MISSING ALT TEXT'}
         onLoad={event => {
