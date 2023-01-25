@@ -1,10 +1,8 @@
 import Image from 'next/image'
 import sanity from '@/services/sanity'
-import { useState } from 'react';
 import createImageUrlBuilder from '@sanity/image-url'
 
-export default function SanityImage({ image, className, alt, priority }) {
-  const [imageIsLoaded, setImageIsLoaded] = useState(false)
+export default function SanityImage({ image, alt }) {
   const imageBuilder = createImageUrlBuilder(sanity.config)
   const urlForImage = (source) => imageBuilder.image(source)
 
@@ -17,7 +15,6 @@ export default function SanityImage({ image, className, alt, priority }) {
 		  <Image
         src={urlForImage(image.asset.url).url()}
         loader={customLoader}
-        priority
         fill
         alt={alt ? alt : 'MISSING ALT TEXT'}
       />
