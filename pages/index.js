@@ -41,7 +41,7 @@ export default function Home(initialData) {
     <Layout>
       <NextSeo title={home.title} />
 
-      <div className="w-full h-screen bg-gray relative overflow-hidden">
+      <div className="w-full h-screen bg-red-500 relative overflow-hidden">
         <SanityImage image={home.heroImage} />
       </div>
       <article className="pt-[15px] lg:pt-[30px]">
