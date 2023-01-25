@@ -12,7 +12,7 @@ export default function SanityImage({ image, alt }) {
 
 	return (
 		  <img
-        className=" "
+        className=" absolute inset-0 w-full h-full object-cover"
         src={'/images/test.jpg'}
         alt={alt ? alt : 'MISSING ALT TEXT'}
       />
