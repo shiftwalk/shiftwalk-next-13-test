@@ -12,10 +12,8 @@ export default function SanityImage({ image, alt }) {
 
 	return (
     <figure className={`image bg-grey cover-image absolute w-full h-full`}>
-		  <Image
+		  <img
         src={image.asset.url}
-        priority
-        fill
         alt={alt ? alt : 'MISSING ALT TEXT'}
       />
     </figure>
