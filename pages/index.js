@@ -41,24 +41,14 @@ export default function Home(initialData) {
     <Layout>
       <NextSeo title={home.title} />
 
-      
-      <LazyMotion features={domAnimation}>
-        <m.main
-          initial="initial"
-          animate="enter"
-          exit="exit"
-          className="mb-12 md:mb-16 xl:mb-24"
-        >
-          <m.div variants={fade} className="w-full h-screen bg-gray relative overflow-hidden">
-            <SanityImage image={home.heroImage} priority />
-          </m.div>
-          <m.article variants={fade} className="pt-[15px] lg:pt-[30px]">
-            <Container>
-              <h1>Testing some stuff here</h1>
-            </Container>
-          </m.article>
-        </m.main>
-      </LazyMotion>
+      <div className="w-full h-screen bg-gray relative overflow-hidden">
+        <SanityImage image={home.heroImage} priority />
+      </div>
+      <article className="pt-[15px] lg:pt-[30px]">
+        <Container>
+          <h1>Testing some stuff here</h1>
+        </Container>
+      </article>
 
       <Footer />
     </Layout>
