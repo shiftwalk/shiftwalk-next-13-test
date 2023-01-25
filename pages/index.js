@@ -42,7 +42,7 @@ export default function Home(initialData) {
       <NextSeo title={home.title} />
 
       <div className="w-full h-screen bg-gray relative overflow-hidden">
-        <SanityImage image={home.heroImage} priority />
+        <SanityImage image={home.heroImage} />
       </div>
       <article className="pt-[15px] lg:pt-[30px]">
         <Container>

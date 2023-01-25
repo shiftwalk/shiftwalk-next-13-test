@@ -11,11 +11,10 @@ export default function SanityImage({ image, alt }) {
   }
 
 	return (
-    <figure className={`image bg-grey cover-image absolute w-full h-full`}>
 		  <img
+        className=" absolute inset-0 w-full h-full object-cover object-center"
         src={image.asset.url}
         alt={alt ? alt : 'MISSING ALT TEXT'}
       />
-    </figure>
   )
 }
