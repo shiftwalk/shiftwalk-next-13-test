@@ -13,8 +13,8 @@ export default function SanityImage({ image, alt }) {
 	return (
     <figure className={`image bg-grey cover-image absolute w-full h-full`}>
 		  <Image
-        src={urlForImage(image.asset.url).url()}
-        loader={customLoader}
+        src={image.asset.url}
+        priority
         fill
         alt={alt ? alt : 'MISSING ALT TEXT'}
       />
