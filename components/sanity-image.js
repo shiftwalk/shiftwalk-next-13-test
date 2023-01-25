@@ -11,6 +11,6 @@ export default function SanityImage({ image, alt }) {
   }
 
 	return (
-		  <img src="/images/test.jpg" />
+		  <img className="w-full h-full" src="/images/test.jpg" />
   )
 }
