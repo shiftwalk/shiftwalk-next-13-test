@@ -1,0 +1,32 @@
+/* Webfonts */
+@import '_fonts.css';
+
+/* Tailwind base/components */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Custom Style Imports */
+@import '_typography.css';
+
+/* Tailwind Utilities */
+@import 'tailwindcss/utilities';
+
+
+/* Simple defaults */
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  @apply font-sans antialiased text-black bg-white;
+}
+
+.remove-scroll::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.cover-image {
+  img {
+    @apply absolute inset-0 w-full h-full object-cover object-center;
+  }
+}

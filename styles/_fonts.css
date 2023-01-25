@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Untitled Sans';
+    src: url('../public/fonts/UntitledSans-Medium.woff2') format('woff2'),
+        url('../public/fonts/UntitledSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Untitled Sans';
+    src: url('../public/fonts/UntitledSans-Regular.woff2') format('woff2'),
+        url('../public/fonts/UntitledSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Untitled Serif';
+    src: url('../public/fonts/UntitledSerif-Regular.woff2') format('woff2'),
+        url('../public/fonts/UntitledSerif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
