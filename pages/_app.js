@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
     <>
       <DefaultSeo {...SEO} /> 
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <Component {...pageProps} key={router.asPath} />
       </AnimatePresence>
     </>

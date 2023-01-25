@@ -13,10 +13,9 @@ export default function SanityResponsiveImage({ image, className, alt, priority 
   }
 
 	return (
-    <figure className={`image bg-grey ${className}`}>
+    <figure className={`bg-grey w-full h-full`}>
 		  <Image
         src={urlForImage(image.asset.url).url()}
-        className={`${imageIsLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity ease-in-out duration-500`}
         loader={customLoader}
         sizes="(max-width:1024px)100vw,
               50vw"
@@ -24,12 +23,6 @@ export default function SanityResponsiveImage({ image, className, alt, priority 
         height={image.asset.metadata.dimensions.height}
         {...(priority ? {priority: true} : {})}
         alt={alt ? alt : 'MISSING ALT TEXT'}
-        onLoad={event => {
-          const target = event.target;
-          if (target.src.indexOf('data:image/gif;base64') < 0) {
-            setImageIsLoaded(true)
-          }
-        }}
       />
     </figure>
   )

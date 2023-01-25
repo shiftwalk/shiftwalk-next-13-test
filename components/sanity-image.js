@@ -13,20 +13,13 @@ export default function SanityImage({ image, className, alt, priority }) {
   }
 
 	return (
-    <figure className={`image bg-grey ${className} cover-image absolute inset-0 w-full h-full object-cover object-center`}>
+    <figure className={`image bg-grey cover-image`}>
 		  <Image
         src={urlForImage(image.asset.url).url()}
         loader={customLoader}
-        className={`${imageIsLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity ease-in-out duration-500`}
         priority
         fill
         alt={alt ? alt : 'MISSING ALT TEXT'}
-        onLoad={event => {
-          const target = event.target;
-          if (target.src.indexOf('data:image/gif;base64') < 0) {
-            setImageIsLoaded(true)
-          }
-        }}
       />
     </figure>
   )
